@@ -97,11 +97,147 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+  html{
+    box-sizing: border-box;
+    font-size: 62.5%; /*1rem = 10px*/
+  }
+
+  *, *:before, *:after{
+    box-sizing: inherit;
+  }
+
+  body{
+    background-color: #f2f2f2;
+    font-family: 'Open Sans', sans-serif;
+  }
+
+  h2{
+    font-family: 'Oswald', sans-serif;
+  }
+
+  /* Header */
+  div.hero{
+    background-image: url(../img/malaga2.jpeg);
+    height: 100vh;
+    background-size: cover;
+    background-position: center center;
+  }
+
+  .hero::after{
+    content: '';
+    background-color: rgba(0,0,0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  div.contenido-header{
+    padding-top: 8rem;
+    position: relative;
+    z-index: 1;
+  }
   
+  @media (min-width: 768px) {
+    div.contenido-header{
+      padding-top: 5rem;
+    }
+  }
 
+  nav.redes-sociales{
+    text-align: center;
+  }
 
+  nav.redes-sociales a {
+    color: white;
+    font-size: 2.5rem;
+    margin-right: 2rem; 
+  }
 
+  nav.redes-sociales a:last-of-type {
+    margin-right: 0; 
+  }
 
+  div.informacion-evento{
+    text-align: center;
+    color: white;
+    margin-top: 5rem;
+  }
+
+  div.informacion-evento-contenido{
+    display: flex;
+    justify-content: space-evenly;
+    max-width: 60%;
+    margin: 0 auto;
+  }
+
+  @media (min-width: 1450px) {
+    div.informacion-evento-contenido{
+      max-width: 100%;
+      justify-content: space-evenly;
+    }
+  }
+
+  @media (min-width: 1450px) {
+    div.informacion-evento-contenido{
+      max-width: 100%;
+      justify-content: space-around;
+    }
+  }
+
+  div.informacion-evento-contenido p {
+    margin: 0;
+    display: inline;
+    font-size: 2rem;
+  }
+
+  div.informacion-evento-contenido p i{
+    color: #fe4918;
+    font-size: 2.8rem;
+  }
+
+  div.informacion-evento p.slogan{
+    text-transform: none;
+    font-size: 3rem;
+    color: white;
+    padding: 0 1rem;
+    margin-top: 2rem;
+  }
+
+  @media (min-width: 768px) {
+    div.informacion-evento p.slogan{
+      font-size: 3vw;
+      margin-top: 3.5rem;
+    }
+  }
+
+  div.informacion-evento p.slogan span{
+    font-weight: bold;
+    color: white;
+  }
+
+  @media (min-width: 768px) {
+    div.informacion-evento p.slogan{
+      font-size: 2.5rem;
+    }
+  }
+
+  div.informacion-evento h1.nombre-sitio{
+    font-family: 'PT Sans', sans-serif;
+    font-size: 6rem;
+    text-transform: uppercase;
+    
+  }
+
+  @media (min-width: 768px) {
+    div.informacion-evento h1.nombre-sitio{
+      font-size: 7vw;
+      margin: 0;
+      line-height: 1;
+      margin-top: 3rem;
+    }
+  }
 
 /* ==========================================================================
    Helper classes
