@@ -118,25 +118,12 @@ textarea {
   }
 
   div.contenedor{
-    width: 98%;
+    width: 95%;
     margin: 0 auto;
-  }
-
-  @media (min-width: 480px) {
-    div.contenedor{
-      width: 95%;
-    }
-  }
-
-  @media (min-width: 768px) {
-    div.contenedor{
-      width: 90%;
-    }
   }
 
   @media (min-width: 992px) {
     div.contenedor{
-      width: 95%;
       max-width: 1200px;
     }
   }
@@ -201,13 +188,6 @@ textarea {
   @media (min-width: 1450px) {
     div.informacion-evento-contenido{
       max-width: 100%;
-      justify-content: space-evenly;
-    }
-  }
-
-  @media (min-width: 1450px) {
-    div.informacion-evento-contenido{
-      max-width: 100%;
       justify-content: space-around;
     }
   }
@@ -258,12 +238,6 @@ textarea {
     margin-top: 3rem;
   }
 
-  @media (min-width: 500px) {
-    div.informacion-evento h1.nombre-sitio{
-      font-size: 7rem;
-    }
-  }
-
   @media (min-width: 768px) {
     div.informacion-evento h1.nombre-sitio{
       font-size: 7vw;
@@ -274,50 +248,85 @@ textarea {
   div.barra{
     background-color: #353535;
     height: auto;
-    padding: 3rem;
+    padding: 2rem;
     word-wrap: break-word;
   }
 
   div.navegacion{
     display: flex;
     flex-direction: column;
+    align-items: center;
   }
 
   @media (min-width: 768px) {
     div.navegacion{
       display: flex;
+      flex-direction: row;
       justify-content: space-between;
-      align-items: center;
+      align-items: left;
     }
   }
  
   div.logotipo p{
     font-family: 'PT Sans';
-    font-weight: bold;
     color: white;
-    font-size: 2.5rem;
+    font-size: 2.6rem;
     margin: 0;
+    text-transform: uppercase;
   }
 
-  @media (min-width: 768px) {
-    p.logotipo{
-      font-size: 3.75rem;
-    }
-  }
-
-  p.logotipo i {
+  div.logotipo p i{
     color: #fe4918;
   }
 
   /* Navegacion-Principal */
-  div.navegación-principal{
+  nav.menu-navegacion{
     display: none;
     margin: 0;
   }
 
-  @media (min-width: 768px) {
-    div.navegación-principal{
+  nav.menu-navegacion a{
+    font-family: 'Oswald', sans-serif;
+    color: white;
+    text-decoration: none;
+    font-size: 2rem;
+    margin-right: 1.5rem;
+    text-transform: uppercase;
+    padding: 0.5rem 1rem;
+    transition: background-color .3s ease;
+    border-radius: 5px;
+  }
+
+  nav.menu-navegacion a:last-of-type{
+    margin-right: 0rem;
+  }
+
+  nav.menu-navegacion a:last-child {
+    border: 2px solid #fe4918;
+    padding: 0.5rem 1.5rem;
+    color: #fe4918;
+  }  
+
+  nav.menu-navegacion a:last-child:hover {
+    color: white;
+  }
+
+  @media (min-width: 920px) {
+    nav.menu-navegacion a{
+      font-size: 2.2rem;
+      margin-right: 2.5rem;
+
     }
+  }
+
+  @media (min-width: 768px) {
+    nav.menu-navegacion{
+      display: block;
+    }
+  }
+
+  nav.menu-navegacion a:hover{
+    background-color: #fe4918
   }
 
 /* ==========================================================================
