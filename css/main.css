@@ -115,17 +115,33 @@ textarea {
 
   h2{
     font-family: 'Oswald', sans-serif;
+    font-size: 2.4em;
+    text-transform: uppercase;
+    text-align: center;
   }
 
-  div.contenedor{
+  h2::after{
+    content: '';
+    margin: 0 auto;
+    background-image: url(../img/separador.png);
+    height: 3rem;
+    width: 10rem;
+    display: block;
+  }
+
+  .contenedor{
     width: 95%;
     margin: 0 auto;
+    max-width: 1200px;
   }
 
-  @media (min-width: 992px) {
-    div.contenedor{
-      max-width: 1200px;
-    }
+  .seccion{
+    padding: 3rem 0;
+  }
+
+  .seccion p{
+    font-size: 1.5rem;
+    text-align: center;
   }
 
   /* Header */
