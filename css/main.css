@@ -97,6 +97,278 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+  html{
+    box-sizing: border-box;
+    font-size: 62.5%; /*1rem = 10px*/
+  }
+
+  *, *:before, *:after{
+    box-sizing: inherit;
+  }
+
+  body{
+    background-color: #f2f2f2;
+    font-family: 'Open Sans', sans-serif;
+  }
+
+  /* Globales */
+
+  h2{
+    font-family: 'Oswald', sans-serif;
+  }
+
+  div.contenedor{
+    width: 95%;
+    margin: 0 auto;
+  }
+
+  @media (min-width: 992px) {
+    div.contenedor{
+      max-width: 1200px;
+    }
+  }
+
+  /* Header */
+  div.hero{
+    background-image: url(../img/malaga2.jpeg);
+    height: 100vh;
+    background-size: cover;
+    background-position: center center;
+  }
+
+  .hero::after{
+    content: '';
+    background-color: rgba(0,0,0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  div.contenido-header{
+    padding-top: 8rem;
+    position: relative;
+    z-index: 1;
+  }
+  
+  @media (min-width: 768px) {
+    div.contenido-header{
+      padding-top: 5rem;
+    }
+  }
+
+  nav.redes-sociales{
+    text-align: center;
+  }
+
+  nav.redes-sociales a {
+    color: white;
+    font-size: 2.5rem;
+    margin-right: 2rem; 
+  }
+
+  nav.redes-sociales a:last-of-type {
+    margin-right: 0; 
+  }
+
+  div.informacion-evento{
+    text-align: center;
+    color: white;
+    margin-top: 5rem;
+  }
+
+  div.informacion-evento-contenido{
+    display: flex;
+    justify-content: space-evenly;
+    max-width: 60%;
+    margin: 0 auto;
+  }
+
+  @media (min-width: 1450px) {
+    div.informacion-evento-contenido{
+      max-width: 100%;
+      justify-content: space-around;
+    }
+  }
+
+  div.informacion-evento-contenido p {
+    margin: 0;
+    display: inline;
+    font-size: 2rem;
+  }
+
+  div.informacion-evento-contenido p i{
+    color: #fe4918;
+    font-size: 2.8rem;
+  }
+
+  div.informacion-evento p.slogan{
+    text-transform: none;
+    font-size: 3rem;
+    color: white;
+    padding: 0 1rem;
+    margin-top: 2rem;
+  }
+
+  @media (min-width: 768px) {
+    div.informacion-evento p.slogan{
+      font-size: 3vw;
+      margin-top: 3.5rem;
+    }
+  }
+
+  div.informacion-evento p.slogan span{
+    font-weight: bold;
+    color: white;
+  }
+
+  @media (min-width: 768px) {
+    div.informacion-evento p.slogan{
+      font-size: 2.5rem;
+    }
+  }
+
+  div.informacion-evento h1.nombre-sitio{
+    font-family: 'PT Sans', sans-serif;
+    font-size: 5rem;
+    text-transform: uppercase;
+    margin: 0;
+    line-height: 1;
+    margin-top: 3rem;
+  }
+
+  @media (min-width: 768px) {
+    div.informacion-evento h1.nombre-sitio{
+      font-size: 7vw;
+    }
+  }
+
+  /* Barra */
+  div.barra{
+    background-color: #353535;
+    height: auto;
+    padding: 2rem;
+    word-wrap: break-word;
+  }
+
+  div.navegacion{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  @media (min-width: 768px) {
+    div.navegacion{
+      align-items: left;
+    }
+  }
+
+  div.logotipo{
+    flex: 0 0 70%;
+  }
+
+  @media (min-width: 768px) {
+    div.logotipo{
+      flex: none;
+    }
+  }
+ 
+  div.logotipo p{
+    font-family: 'PT Sans';
+    color: white;
+    font-size: 2.6rem;
+    margin: 0;
+    text-transform: uppercase;
+  }
+
+  div.logotipo p i{
+    color: #fe4918;
+  }
+
+  /* Navegacion-Principal */
+  nav.menu-navegacion{
+    flex: 0 0 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    display: none;
+  }
+
+  @media (min-width: 768px) {
+    nav.menu-navegacion{
+      flex: none;
+      display: block;
+    }
+  }
+
+  nav.menu-navegacion a{
+    font-family: 'Oswald', sans-serif;
+    color: white;
+    text-decoration: none;
+    font-size: 2rem;
+    margin: 0.8rem 0.1rem 0 0;
+    text-transform: uppercase;
+    padding: 0.5rem 1rem;
+    transition: background-color .3s ease;
+    border-radius: 5px;
+    text-align: center;
+  }
+
+  nav.menu-navegacion a:last-of-type{
+    margin-right: 0rem;
+  }
+
+  nav.menu-navegacion a:last-child {
+    border: 2px solid #fe4918;
+    padding: 0.5rem 1.5rem;
+    color: #fe4918;
+  }  
+
+  nav.menu-navegacion a:last-child:hover {
+    color: white;
+  }
+
+  @media (min-width: 920px) {
+    nav.menu-navegacion a{
+      font-size: 2.2rem;
+      margin: 0 2.5rem 0 0;
+    }
+  }
+
+  nav.menu-navegacion a:hover{
+    background-color: #fe4918
+  }
+
+  /* Menu Mobil */
+  div.menu-mobile{
+    width: 5rem;
+    display: inline;
+    text-align: right;
+  }
+
+  div.menu-mobile:hover{
+    cursor: pointer;
+  }
+
+  @media (min-width: 768px) {
+    div.menu-mobile{
+      display: none;
+      flex: none;
+    }
+  }
+
+  div.menu-mobile span{
+    height: 0.7rem;
+    margin-bottom: 0.7rem;
+    background-color: white;
+    display: block;
+  }
+
+  div.menu-mobile span:last-of-type{
+    margin-bottom: 0;
+  }
 
 /* ==========================================================================
    Helper classes
