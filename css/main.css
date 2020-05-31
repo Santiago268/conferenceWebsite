@@ -255,12 +255,23 @@ textarea {
   div.navegacion{
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     align-items: center;
   }
 
   @media (min-width: 768px) {
     div.navegacion{
       align-items: left;
+    }
+  }
+
+  div.logotipo{
+    flex: 0 0 70%;
+  }
+
+  @media (min-width: 768px) {
+    div.logotipo{
+      flex: none;
     }
   }
  
@@ -278,8 +289,18 @@ textarea {
 
   /* Navegacion-Principal */
   nav.menu-navegacion{
-    display: none;
+    flex: 0 0 100%;
+    display: flex;
+    flex-direction: column;
     margin: 0;
+    display: none;
+  }
+
+  @media (min-width: 768px) {
+    nav.menu-navegacion{
+      flex: none;
+      display: block;
+    }
   }
 
   nav.menu-navegacion a{
@@ -287,11 +308,12 @@ textarea {
     color: white;
     text-decoration: none;
     font-size: 2rem;
-    margin-right: 0.1rem;
+    margin: 0.8rem 0.1rem 0 0;
     text-transform: uppercase;
     padding: 0.5rem 1rem;
     transition: background-color .3s ease;
     border-radius: 5px;
+    text-align: center;
   }
 
   nav.menu-navegacion a:last-of-type{
@@ -311,14 +333,7 @@ textarea {
   @media (min-width: 920px) {
     nav.menu-navegacion a{
       font-size: 2.2rem;
-      margin-right: 2.5rem;
-
-    }
-  }
-
-  @media (min-width: 768px) {
-    nav.menu-navegacion{
-      display: block;
+      margin: 0 2.5rem 0 0;
     }
   }
 
@@ -329,15 +344,18 @@ textarea {
   /* Menu Mobil */
   div.menu-mobile{
     width: 5rem;
-    display: block;
+    display: inline;
     text-align: right;
-    margin-top: 12px;
   }
 
+  div.menu-mobile:hover{
+    cursor: pointer;
+  }
 
   @media (min-width: 768px) {
     div.menu-mobile{
       display: none;
+      flex: none;
     }
   }
 
