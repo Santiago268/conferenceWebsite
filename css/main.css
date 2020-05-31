@@ -254,15 +254,12 @@ textarea {
 
   div.navegacion{
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
   }
 
   @media (min-width: 768px) {
     div.navegacion{
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
       align-items: left;
     }
   }
@@ -290,7 +287,7 @@ textarea {
     color: white;
     text-decoration: none;
     font-size: 2rem;
-    margin-right: 1.5rem;
+    margin-right: 0.1rem;
     text-transform: uppercase;
     padding: 0.5rem 1rem;
     transition: background-color .3s ease;
@@ -327,6 +324,32 @@ textarea {
 
   nav.menu-navegacion a:hover{
     background-color: #fe4918
+  }
+
+  /* Menu Mobil */
+  div.menu-mobile{
+    width: 5rem;
+    display: block;
+    text-align: right;
+    margin-top: 12px;
+  }
+
+
+  @media (min-width: 768px) {
+    div.menu-mobile{
+      display: none;
+    }
+  }
+
+  div.menu-mobile span{
+    height: 0.7rem;
+    margin-bottom: 0.7rem;
+    background-color: white;
+    display: block;
+  }
+
+  div.menu-mobile span:last-of-type{
+    margin-bottom: 0;
   }
 
 /* ==========================================================================
