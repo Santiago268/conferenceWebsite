@@ -158,10 +158,17 @@ textarea {
     margin-top: 1rem;
     display: inline-block;
     transition: background-color .3s ease;
+    border: 2px solid #fe4919;
+  }
+
+  .boton.hollow,
+  .boton.hollow:hover{
+    background-color: white;
+    color: #fe4919;
   }
 
   .boton:hover{
-    background-color: #6e1e08;
+    background-color: #eb4314;
   }
 
   .derecha{
@@ -576,6 +583,7 @@ textarea {
     background-size: cover;
     background-position: center center;
     background-attachment: fixed;
+    -webkit-filter: brightness(0.7);
   }
 
   div.contador{
@@ -588,23 +596,12 @@ textarea {
     background-image: url(../img/malaga-5.jpg);
   }
 
-  div.contador::after{
-    content: '';
-    background-color: rgba(0,0,0, 0.4);
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-  }
-
   ul.resumen-evento{
     position: relative;
     padding: 120px 0;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    z-index: 1;
   }
 
   ul.resumen-evento li {
@@ -627,6 +624,61 @@ textarea {
     font-size: 5em;
     display: block;
     margin: 0 0 1rem 0;
+    font-family: 'Oswald', sans-serif;
+  }
+
+  /* Tabla de Precios */
+  ul.lista-precios > li{
+    padding: 1rem;
+  }
+
+  @media (min-width: 768px) {
+    ul.lista-precios{
+      display: flex;
+      justify-content: space-between;
+    }
+
+    ul.lista-precios > li{
+      flex: 0 0 calc(33.3% - 1rem);
+    }
+  }
+
+  div.tabla-precio{
+    border: 1px solid #e1e1e1;
+    background-color: white;
+    padding: 4rem 0;
+    text-align: center;
+  }
+
+  div.tabla-precio:hover{
+    transform: scale(1.1);
+    border: 1px solid #fe4919;
+    box-shadow: 0px 0px 50px #666;
+    transition: all .5s ease;
+  }
+
+  div.tabla-precio ul li {
+    font-family: 'PTSans', sans-serif;
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    color: #868686;
+    line-height: 26px;
+  }
+
+  div.tabla-precio ul li  i{
+    color: green;
+  }
+
+  div.tabla-precio h3{
+    font-family: 'Oswald', sans-serif;
+    font-size: 2.1rem;
+    text-transform: uppercase;
+  }
+
+  div.tabla-precio p.numero{
+    color: black;
+    margin-top: 1rem;
   }
 
 /* ==========================================================================
