@@ -639,7 +639,7 @@ textarea {
     }
 
     ul.lista-precios > li{
-      flex: 0 0 calc(33.3% - 1rem);
+      flex: 0 0 calc(33.3% - 0.2rem);
     }
   }
 
@@ -658,7 +658,7 @@ textarea {
   }
 
   div.tabla-precio ul li {
-    font-family: 'PTSans', sans-serif;
+    font-family: 'PT Sans', sans-serif;
     font-size: 1.6rem;
     margin-bottom: 2rem;
     text-transform: uppercase;
@@ -679,6 +679,57 @@ textarea {
   div.tabla-precio p.numero{
     color: black;
     margin-top: 1rem;
+  }
+
+  /* Mapa */
+  div.mapa{
+    height: 420px;
+    background-color: green;
+  }
+
+  /* Opinones */
+  div.opiniones{
+    padding-bottom: 2rem;
+  }
+
+  div.opinion {
+    padding: 0.5rem;
+  }
+
+  @media (min-width: 768px) {
+    div.opiniones{
+      display: flex;
+      justify-content: space-between;
+    }
+    div.opinion {
+      flex: 0 0 calc(33.3% - 1rem);
+    }
+  }
+
+  blockquote{
+    background-color: white;
+    border: 1px solid #e1e1e1;
+    position: relative;
+    margin: 0 0 1rem 0;
+  }
+
+  blockquote p{
+    text-align: justify !important;
+    font-size: 1.5rem !important;
+    font-family: 'PT Sans', sans-serif;
+    padding: 0 25px 0 60px;
+  }
+
+  blockquote p::before{
+    content: '\201c';
+    position: absolute;
+    left: 14px;
+    top: 3px;
+    font-size: 10rem;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    color: #fe4919;
   }
 
 /* ==========================================================================
