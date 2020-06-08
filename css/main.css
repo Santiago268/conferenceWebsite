@@ -797,6 +797,25 @@ div.newsletter .contenido h3{
   margin: 3rem 0;
 }
 
+/* Contador */
+section.contador ul li{
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'Oswald', sans-serif;
+  font-size: 2rem;
+}
+
+@media (min-width: 768px) {
+  section.contador ul{
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  section.contador ul li{
+    flex: 0 0 calc(25% - 1rem);
+  }
+}
+
 
 /* ==========================================================================
    Helper classes
