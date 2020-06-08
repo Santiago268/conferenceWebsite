@@ -167,6 +167,10 @@ textarea {
     color: #fe4919;
   }
 
+  .boton.transparente{
+    background-color: transparent;
+  }
+
   .boton:hover{
     background-color: #eb4314;
   }
@@ -783,6 +787,14 @@ div.newsletter .contenido{
 div.newsletter .contenido p{
   font-size: 1.2em;
   text-transform: none;
+}
+
+div.newsletter .contenido h3{
+  color: white;
+  text-transform: uppercase;
+  font-size: 3.3vw;
+  font-family: 'PT Sants', sans-serif;
+  margin: 3rem 0;
 }
 
 
