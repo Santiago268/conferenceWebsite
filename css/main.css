@@ -167,6 +167,10 @@ textarea {
     color: #fe4919;
   }
 
+  .boton.transparente{
+    background-color: transparent;
+  }
+
   .boton:hover{
     background-color: #eb4314;
   }
@@ -731,6 +735,136 @@ textarea {
     line-height: 1;
     color: #fe4919;
   }
+
+  footer.info-opinion{
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  footer.info-opinion img{
+    width: 20%;
+    border-radius: 50%;
+    margin-left: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  footer.info-opinion cite{
+    width: 60%;
+    text-align: left;
+    color: #fe4919;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-style: normal;
+  }
+
+  footer.info-opinion cite span{
+    color: black;
+    display: block;
+    font-weight: 500;
+    text-transform: none;
+  }
+
+/* Newsletter */
+div.newsletter {
+  position: relative;
+  height: auto;
+}
+
+div.newsletter::before {
+  background-image: url(../img/bg-newsletter.jpg);
+  content: '';
+}
+
+div.newsletter .contenido{
+  padding: 10rem 0;
+  color: white; 
+  text-align:  center;
+  position: relative;
+}
+
+div.newsletter .contenido p{
+  font-size: 1.2em;
+  text-transform: none;
+}
+
+div.newsletter .contenido h3{
+  color: white;
+  text-transform: uppercase;
+  font-size: 3.3vw;
+  font-family: 'PT Sants', sans-serif;
+  margin: 3rem 0;
+}
+
+/* Contador */
+section.contador ul li{
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.7rem;
+}
+
+@media (min-width: 768px) {
+  section.contador ul{
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  section.contador ul li{
+    flex: 0 0 calc(25% - 1rem);
+    font-size: 2rem;
+  }
+}
+
+/* Footer  */
+footer{
+  background-color: #353535;
+  padding-top: 4rem;
+  margin-top: 2rem;
+}
+
+div.pie-pagina{
+  color: white;
+  padding: 0 2rem;
+}
+
+@media (min-width: 768px) {
+  div.pie-pagina{
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  div.footer-informacion,
+  div.ultimos-tweets,
+  div.redes-sociales{
+    flex: 0 0 calc(33.3% - 1rem);
+  }
+}
+
+footer h3{
+  color: white;
+  text-transform: uppercase;
+  font-family: 'Oswald', sans-serif;
+  margin-bottom: 2rem;
+}
+
+footer h3 span{
+  color: #fe4919;
+}
+
+footer .ultimos-tweets li{
+  margin-bottom: 1.5rem;
+}
+
+p.copyright{
+  background-color: #2e2e2e;
+  color: white;
+  padding: 1rem 0;
+  text-align: center;
+  margin: 3rem 0 0 0;
+}
+
 
 /* ==========================================================================
    Helper classes
