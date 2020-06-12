@@ -981,9 +981,11 @@ div.extras div.orden {
   flex-direction: column;
 }
 
-div.extras div.orden input{
-  flex: 0 0 50%;
+div.extras div.orden > input,
+div.extras div.orden > select{
+  width: 75%;
 }
+
 
 /* ==========================================================================
    Helper classes
