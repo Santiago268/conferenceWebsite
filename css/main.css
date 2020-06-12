@@ -866,6 +866,93 @@ p.copyright{
   margin: 3rem 0 0 0;
 }
 
+/* Paginas Secundarias */
+/* Registro */
+form.registro h3{
+  text-align: center;
+  text-transform: uppercase;
+  margin: 2rem 0 0 0;
+}
+
+form.registro label {
+  font-weight: bold;
+}
+
+h4 {
+  text-align: center;
+  text-transform: uppercase;
+  border-bottom: 2px solid #fe4918;
+  padding-bottom: 1rem;
+  font-size: 1.7rem;
+}
+
+div.caja{
+  background-color: white;
+  border: 1px solid #e1e1e1;
+  padding: 1rem;
+  margin: 1rem;
+}
+
+div.campo{
+  padding: 2rem;
+}
+
+@media (min-width: 768px) {
+  #datos-usuario{
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  div.campo{
+    flex: 0 0 calc(33.3% - 1rem);
+  }
+}
+
+div.paquetes .tabla-precio:hover{
+  transform: none;
+  box-shadow: none;
+}
+
+div.paquetes .tabla-precio input{
+  clear: both;
+  width: 100px;
+  margin: 10px auto 0 auto;
+  display: block;
+}
+
+.contenido-dia {
+  padding: 20px;
+  /*display: none; */
+}
+
+.columnas > div{
+  display: flex;
+  flex-direction: column;
+}
+
+.columnas > div p{
+  text-align: left;
+  font-weight: bold;
+}
+
+.columnas > div label{
+  margin-bottom: 1rem;
+  font-weight: normal;
+}
+
+.columnas > div input{
+  margin-right: 10px;
+}
+
+@media (min-width: 768px) {
+  .columnas {
+    display: flex;
+    justify-content: space-between;
+  }
+  .columnas > div{
+    flex: 0 0 calc(33.3% - 1rem);
+  }
+}
 
 /* ==========================================================================
    Helper classes
