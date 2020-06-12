@@ -940,6 +940,11 @@ div.paquetes .tabla-precio input{
   font-weight: normal;
 }
 
+.columnas > div label time{
+  color: #fe4919;
+  font-weight: bold;
+}
+
 .columnas > div input{
   margin-right: 10px;
 }
@@ -952,6 +957,32 @@ div.paquetes .tabla-precio input{
   .columnas > div{
     flex: 0 0 calc(33.3% - 1rem);
   }
+}
+
+/* Resumen Registro */
+div.resumen p{
+  font-size: 1.4rem;
+  text-transform: uppercase;
+}
+
+.summary{
+  display: flex;
+  justify-content: space-between;
+}
+
+.extras,
+.total{
+  flex: 0 0 calc(50% - 1rem);
+}
+
+div.extras div.orden {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+
+div.extras div.orden input{
+  flex: 0 0 50%;
 }
 
 /* ==========================================================================
