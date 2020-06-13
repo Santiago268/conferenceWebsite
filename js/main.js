@@ -21,6 +21,10 @@
     var botonRegistro = document.getElementById('btnRegistro');
     var resultado = document.getElementById('lista-productos');
 
+    // Extras
+    var camisas = document.getElementById('camisa_evento');
+    var etiquetas = document.getElementById('etiquetas');
+
     calcular.addEventListener('click', calcularTotal);
 
 
@@ -36,8 +40,8 @@
             ticketCompleto = pase_completo.value;
 
         var costeTickets = (ticketDia * 30) + (ticket2Dias * 45) + (ticketCompleto * 50);
-        console.log(costeTickets);
-
+        var total = costeTickets + ((camisas * 10)*0.93) + (etiquetas * 2);
+        console.log(total);
       }
     }
 
