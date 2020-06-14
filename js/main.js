@@ -19,16 +19,20 @@
     var calcular = document.getElementById('calcular');
     var errorDiv = document.getElementById('error');
     var botonRegistro = document.getElementById('btnRegistro');
-    var resultado = document.getElementById('lista-productos');
+    var lista_productos = document.getElementById('lista-productos');
+    var suma_total= document.getElementById('suma-total');
 
     // Extras
-    var camisas = document.getElementById('camisa_evento');
+    var camisas = document.getElementById('camisa-evento');
     var etiquetas = document.getElementById('etiquetas');
 
+    //Eventos
     calcular.addEventListener('click', calcularTotal);
+    pase_dia.addEventListener('blur', mostrarDias);
+    pase_dosdias.addEventListener('blur', mostrarDias);
+    pase_completo.addEventListener('blur', mostrarDias);
 
-
-
+    // Funciones
     function calcularTotal(event){
       event.preventDefault();
       if(regalo.value == ''){
@@ -38,13 +42,59 @@
         var ticketDia= parseInt(pase_dia.value, 10) || 0,
             ticket2Dias= parseInt(pase_dosdias.value, 10) || 0,
             ticketCompleto = parseInt(pase_completo.value, 10) || 0,
-            totalCamisas = parseInt(camisas, 10) || 0,
-            totalEtiquetas = parseInt(etiquetas, 10) || 0;
+            totalCamisas = parseInt(camisas.value, 10) || 0,
+            totalEtiquetas = parseInt(etiquetas.value, 10) || 0;
 
         var costeTickets = (ticketDia * 30) + (ticket2Dias * 45) + (ticketCompleto * 50);
-        var total = costeTickets + ((totalCamisas * 10)*0.93) + (etiqtotalEtiquetasuetas * 2);
-        console.log(total);
+        var total = costeTickets + ((totalCamisas * 10)*0.93) + (totalEtiquetas * 2);
+        var listadoProductos = [];
+
+        if(ticketDia >= 1)
+          listadoProductos.push(ticketDia + ' - One Day pass');
+        
+        if(ticket2Dias >= 1)
+          listadoProductos.push(ticket2Dias + ' - Two Day pass');
+
+        if(ticketCompleto >= 1)
+          listadoProductos.push(ticketCompleto + ' - Full pass');
+        
+        if(totalCamisas >= 1)
+          listadoProductos.push(totalCamisas + ' - Number of T-shirts');
+        
+        if(totalEtiquetas >= 1)
+          listadoProductos.push(totalEtiquetas + ' - Number of Sticker Packs');
+
+        lista_productos.style.display= "block"; 
+        lista_productos.innerHTML = '';
+        for(var i= 0; i < listadoProductos.length; i++){
+          lista_productos.innerHTML += listadoProductos[i] + '</br>';
+        }
+
+        suma_total.innerHTML = total.toFixed(2) + ' €';
       }
+    }
+
+    function mostrarDias(){
+      var ticketDia= parseInt(pase_dia.value, 10) || 0,
+          ticket2Dias= parseInt(pase_dosdias.value, 10) || 0,
+          ticketCompleto = parseInt(pase_completo.value, 10) || 0.
+
+      var dias_elegidos = [];
+
+      if (ticketDia > 0){
+        dias_elegidos.push('viernes');
+      }
+      if (ticket2Dias > 0){
+        dias_elegidos.push('viernes', 'sabado');
+      }
+      if (ticketCompleto > 0){
+        dias_elegidos.push('viernes', 'sabado', 'domingo');
+      }
+
+      for(var i= 0; i < dias_elegidos.length; i++){
+        document.getElementById(dias_elegidos[i]).style.display= 'block';
+      }
+
     }
 
   }); //DOM CONTENT LOADED

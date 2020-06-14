@@ -922,7 +922,7 @@ div.paquetes .tabla-precio input{
 
 .contenido-dia {
   padding: 20px;
-  /*display: none; */
+  display: none; 
 }
 
 .columnas > div{
@@ -993,6 +993,23 @@ div.resumen div.total{
 div.resumen input{
   display: block;
   margin: 10px auto;
+}
+
+div.resumen select{
+  margin: 10px auto;
+}
+
+#lista-productos{
+  background-color: #e1e1e1;
+  padding: 15px;
+  display: none;
+}
+
+#suma-total{
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fe4919;
 }
 
 /* ==========================================================================
