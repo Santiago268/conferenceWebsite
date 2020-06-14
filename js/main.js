@@ -35,12 +35,14 @@
         alert("You must choose a Gift!!");
         regalo.focus();
       }else{
-        var ticketDia= pase_dia.value,
-            ticket2Dias= pase_dosdias.value,
-            ticketCompleto = pase_completo.value;
+        var ticketDia= parseInt(pase_dia.value, 10) || 0,
+            ticket2Dias= parseInt(pase_dosdias.value, 10) || 0,
+            ticketCompleto = parseInt(pase_completo.value, 10) || 0,
+            totalCamisas = parseInt(camisas, 10) || 0,
+            totalEtiquetas = parseInt(etiquetas, 10) || 0;
 
         var costeTickets = (ticketDia * 30) + (ticket2Dias * 45) + (ticketCompleto * 50);
-        var total = costeTickets + ((camisas * 10)*0.93) + (etiquetas * 2);
+        var total = costeTickets + ((totalCamisas * 10)*0.93) + (etiqtotalEtiquetasuetas * 2);
         console.log(total);
       }
     }
