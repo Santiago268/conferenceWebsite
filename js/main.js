@@ -36,6 +36,8 @@
     apellido. addEventListener('blur', validarCampos);
     email.addEventListener('blur', validarCampos);
 
+    email.addEventListener('blur', validarEmail);
+
     // Funciones
     function calcularTotal(event){
       event.preventDefault();
@@ -108,6 +110,16 @@
       } else {
         errorDiv.style.display = 'none';
         this.style.border = '1px solid #cccccc';
+      }
+    }
+
+    function validarEmail(){
+      if(this.value.indexOf("@") > -1){
+        this.style.border = '1px solid #cccccc';
+      }else{
+        errorDiv.style.display='block';
+        errorDiv.innerHTML = 'The Email introduced is not valid (@)';
+        this.style.border = '1px solid red';
       }
     }
 
