@@ -897,8 +897,13 @@ div.campo{
   padding: 2rem;
 }
 
+#error{
+  padding: 0 0 0 2rem;
+  color: red;
+}
+
 @media (min-width: 768px) {
-  #datos-usuario{
+  .datos-usuario{
     display: flex;
     justify-content: space-between;
   }
