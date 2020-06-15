@@ -444,8 +444,14 @@ textarea {
   }
 
   div.contenedor-video {
+    height: 100vh;
     max-width: 100%;
-    overflow-x: hidden;
+  }
+
+  div.contenedor-video div.imagen-talleres{
+    height: 100%;
+    width: 100%;
+    background-image: url(../img/bg-talleres.jpg);
   }
 
   div.contenido-programa {
