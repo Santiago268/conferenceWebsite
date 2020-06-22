@@ -136,3 +136,14 @@
   }); //DOM CONTENT LOADED
 
 })();
+
+$(function(){
+  $('.info-curso:first').show();
+  $('.menu-programa a').on('click', function(){
+    var enlace = $(this).attr('href'); 
+    $('.info-curso').hide(); 
+    $(enlace).fadeIn(1000);
+    
+    return false;
+  });
+});
