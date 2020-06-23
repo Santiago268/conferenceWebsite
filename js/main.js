@@ -3,7 +3,17 @@
 
   var regalo= document.getElementById('regalo');
   document.addEventListener('DOMContentLoaded', function(){
+    var map = L.map('mapa').setView([36.705173, -4.459848], 13);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+    L.marker([36.705173, -4.459848]).addTo(map)
+    .bindPopup('Malaga Software Conference 2020.<br> Palacio de Ferias y Congresos de Málaga.')
+    .openPopup();
     console.log("listo");
+33
 
     // Campos datos de usuario
     var nombre = document.getElementById('nombre');
@@ -126,3 +136,18 @@
   }); //DOM CONTENT LOADED
 
 })();
+
+$(function(){
+  $('.info-curso:first').show();
+  $('.menu-programa a:first').addClass('activo');
+
+  $('.menu-programa a').on('click', function(){
+    $('.menu-programa a').removeClass('activo');
+    $(this).addClass('activo');
+    var enlace = $(this).attr('href'); 
+    $('.info-curso').hide(); 
+    $(enlace).fadeIn(1000);
+    
+    return false;
+  });
+});
