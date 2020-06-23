@@ -139,7 +139,11 @@
 
 $(function(){
   $('.info-curso:first').show();
+  $('.menu-programa a:first').addClass('activo');
+
   $('.menu-programa a').on('click', function(){
+    $('.menu-programa a').removeClass('activo');
+    $(this).addClass('activo');
     var enlace = $(this).attr('href'); 
     $('.info-curso').hide(); 
     $(enlace).fadeIn(1000);

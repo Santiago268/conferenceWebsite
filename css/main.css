@@ -484,7 +484,6 @@ textarea {
   nav.menu-programa{
     width: 100%;
     border-bottom: 1px solid #fe4919;
-    padding-bottom: 1rem;
     font-size: 2rem;
   }
 
@@ -506,6 +505,22 @@ textarea {
     text-decoration: none;
     font-family: 'Oswald', sans-serif;
     margin-bottom: 1rem;
+    position: relative;
+  }
+
+  nav.menu-programa a.activo::after{
+    position: absolute;
+    content: '';
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    height: 20px;
+    width: 30px;
+    background-image: url(../img/talleres-flecha.jpg);
+    background-position: top center;
+    background-repeat: no-repeat;
+    bottom: -30px;
   }
 
   nav.menu-programa a i,
