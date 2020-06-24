@@ -424,6 +424,10 @@ textarea {
     flex: 0 0 70%;
   }
 
+  div.logotipo a{
+    text-decoration: none;
+  }
+
   @media (min-width: 768px) {
     div.logotipo{
       flex: none;
