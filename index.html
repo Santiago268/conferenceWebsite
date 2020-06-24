@@ -51,7 +51,9 @@
     <div class="contenedor">
       <div class="navegacion">
         <div class="logotipo">
-          <p><i class="fas fa-angle-right"></i>Malaga Soft. Conf.</p>
+          <a href="index.html">
+            <p><i class="fas fa-angle-right"></i>Malaga Soft. Conf.</p>
+          </a>
         </div>
         
         
@@ -62,7 +64,7 @@
         </div>
 
         <nav class="menu-navegacion">
-              <a href="index.html">Conference</a>
+              <a href="conferencia.html">Conference</a>
               <a href="#">Schedule</a>
               <a href="#">Guests</a>
               <a href="registro.html">Booking</a>
@@ -200,10 +202,10 @@
   <div class="contador parallax">
     <div class="contenedor">
       <ul class="resumen-evento">
-        <li><p class="numero">6</p> Guests</li>
-        <li><p class="numero">15</p> Workshops</li>
-        <li><p class="numero">3</p> Guests</li>
-        <li><p class="numero">9</p> Conferences</li>
+        <li><p class="numero"></p> Guests</li>
+        <li><p class="numero"></p> Workshops</li>
+        <li><p class="numero"></p> Guests</li>
+        <li><p class="numero"></p> Conferences</li>
       </ul>
     </div>
   </div>
@@ -309,10 +311,10 @@
   <section class="contador seccion contenedor">
     <h2>Remaining</h2>
     <ul>
-      <li><p class="numero">365</p>days</li>
-      <li><p class="numero">24</p>hours</li>
-      <li><p class="numero">60</p>minutes</li>
-      <li><p class="numero">60</p>seconds</li>
+      <li><p id="dias" class="numero"></p>days</li>
+      <li><p id="horas" class="numero"></p>hours</li>
+      <li><p id="minutos" class="numero"></p>minutes</li>
+      <li><p id="segundos" class="numero"></p>seconds</li>
     </ul>
   </section>
 
@@ -350,8 +352,11 @@
   <script src="js/vendor/modernizr-3.8.0.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.4.1.min.js"><\/script>')</script>
-  <script src="js/plugins.js"></script>
   <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
+  <script src="js/plugins.js"></script>
+  <script src="js/jquery.animateNumber.js"></script>
+  <script src="js/jquery.countdown.js"></script>
+  <script src="js/jquery.lettering.js"></script>
   <script src="js/main.js"></script>
 
   <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->

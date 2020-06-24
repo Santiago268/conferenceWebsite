@@ -194,6 +194,93 @@ textarea {
     text-align: center;
   }
 
+  /* Lettering */
+  h1.nombre-sitio span{
+    position: relative;
+    text-shadow: 0 0 25px #1b1b1b; 
+  }
+
+  @media (min-width: 992px) {
+    .char1{
+      top: 15px; right: 0px;
+    }
+    .char2{
+      top: 5px; right: 0px;
+    }
+    .char3{
+      top: 15px; right: 0px;
+    }
+    .char4{
+      top: 5px; right: 0px;
+    }
+    .char5{
+      top: 15px; right: 0px;
+    }
+    .char6{
+      top: 5px; right: 0px;
+    }
+    .char7{
+      top: 15px; right: 0px;
+    }
+    .char8{
+      top: 5px; right: 0px;
+    }
+    .char9{
+      top: 15px; right: 0px;
+    }
+    .char10{
+      top: 5px; right: 0px;
+    }
+    .char11{
+      top: 15px; right: 0px;
+    }
+    .char12{
+      top: 5px; right: 0px;
+    }
+    .char13{
+      top: 15px; right: 0px;
+    }
+    .char14{
+      top: 5px; right: 0px;
+    }
+    .char15{
+      top: 15px; right: 0px;
+    }
+    .char16{
+      top: 5px; right: 0px;
+    }
+    .char17{
+      top: 15px; right: 0px;
+    }
+    .char18{
+      top: 5px; right: 0px;
+    }
+    .char19{
+      top: 15px; right: 0px;
+    }
+    .char20{
+      top: 5px; right: 0px;
+    }
+    .char21{
+      top: 15px; right: 0px;
+    }
+    .char22{
+      top: 5px; right: 0px;
+    }
+    .char23{
+      top: 15px; right: 0px;
+    }
+    .char24{
+      top: 5px; right: 0px;
+    }
+    .char25{
+      top: 15px; right: 0px;
+    }
+    .char26{
+      top: 5px; right: 0px;
+    }
+  }
+
   /* Header */
   div.hero{
     background-image: url(../img/malaga2.jpeg);
@@ -335,6 +422,10 @@ textarea {
 
   div.logotipo{
     flex: 0 0 70%;
+  }
+
+  div.logotipo a{
+    text-decoration: none;
   }
 
   @media (min-width: 768px) {
