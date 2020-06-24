@@ -137,6 +137,10 @@
 })();
 
 $(function(){
+
+  // Lettering
+  $('.nombre-sitio').lettering();
+
   // Progama de Conferencias
   $('.info-curso:first').show();
   $('.menu-programa a:first').addClass('activo');
