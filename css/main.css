@@ -983,6 +983,16 @@ p.copyright{
 }
 
 /* Paginas Secundarias */
+/* Conferencia */
+div.galeria a{
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+body.conferencia .menu-navegacion .activo{
+  border-bottom: 2px solid #fe4918;
+}
+
 /* Registro */
 form.registro h3{
   text-align: center;
