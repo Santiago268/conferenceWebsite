@@ -141,6 +141,15 @@ $(function(){
   // Lettering
   $('.nombre-sitio').lettering();
 
+  // Menú fijo
+  var windowHeight = $(window).height();
+  var barraAltura = $('.barra').innerHeight();
+
+  $(window).scroll(function(){
+    var scroll = $(window).scrollTop();
+
+  });
+
   // Progama de Conferencias
   $('.info-curso:first').show();
   $('.menu-programa a:first').addClass('activo');
