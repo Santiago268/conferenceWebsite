@@ -141,6 +141,26 @@ $(function(){
   // Lettering
   $('.nombre-sitio').lettering();
 
+  // Menú fijo
+  var windowHeight = $(window).height();
+  var barraAltura = $('.barra').innerHeight();
+
+  $(window).scroll(function(){
+    var scroll = $(window).scrollTop();
+    if(scroll > windowHeight){
+      $('.barra').addClass('fixed');
+      $('body').css({'margin-top': barraAltura+'px'});
+    }else{
+      $('.barra').removeClass('fixed');
+      $('body').css({'margin-top': '0px'});
+    }
+  });
+
+  // Menu responsive
+  $('.menu-mobile').on('click', function(){
+    $('.menu-navegacion').slideToggle();
+  });
+
   // Progama de Conferencias
   $('.info-curso:first').show();
   $('.menu-programa a:first').addClass('activo');
