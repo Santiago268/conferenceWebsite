@@ -156,6 +156,11 @@ $(function(){
     }
   });
 
+  // Menu responsive
+  $('.menu-mobile').on('click', function(){
+    $('.menu-navegacion').slideToggle();
+  });
+
   // Progama de Conferencias
   $('.info-curso:first').show();
   $('.menu-programa a:first').addClass('activo');

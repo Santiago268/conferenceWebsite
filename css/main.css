@@ -456,17 +456,14 @@ textarea {
 
   /* Navegacion-Principal */
   nav.menu-navegacion{
-    flex: 0 0 100%;
-    display: flex;
-    flex-direction: column;
-    margin: 0;
     display: none;
+    width: 100%;
   }
 
   @media (min-width: 768px) {
     nav.menu-navegacion{
-      flex: none;
-      display: block;
+      display: inline;
+      width: auto;
     }
   }
 
@@ -481,6 +478,12 @@ textarea {
     transition: background-color .3s ease;
     border-radius: 5px;
     text-align: center;
+  }
+
+  @media (max-width: 768px) {
+    nav.menu-navegacion a{
+      display: block;
+    }
   }
 
   nav.menu-navegacion a:last-of-type{
