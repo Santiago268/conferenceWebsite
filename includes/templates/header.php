@@ -67,7 +67,7 @@
               <a href="conferencia.php">Conference</a>
               <a href="#">Schedule</a>
               <a href="#">Guests</a>
-              <a href="registro.html">Booking</a>
+              <a href="registro.php">Booking</a>
         </nav>
       </div>
     </div><!--.contenedor-->
