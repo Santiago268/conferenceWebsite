@@ -51,7 +51,7 @@
     <div class="contenedor">
       <div class="navegacion">
         <div class="logotipo">
-          <a href="index.html">
+          <a href="index.php">
             <p><i class="fas fa-angle-right"></i>Malaga Soft. Conf.</p>
           </a>
         </div>
