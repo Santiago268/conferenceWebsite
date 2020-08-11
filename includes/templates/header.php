@@ -56,7 +56,6 @@
           </a>
         </div>
         
-        
         <div class="menu-mobile">
           <span></span>
           <span></span>
@@ -65,7 +64,7 @@
 
         <nav class="menu-navegacion">
               <a href="conferencia.php">Conference</a>
-              <a href="#">Schedule</a>
+              <a href="calendario.php">Schedule</a>
               <a href="#">Guests</a>
               <a href="registro.php">Booking</a>
         </nav>
