@@ -36,10 +36,31 @@
                 );
     
                 $calendario[$fecha][] = $evento;
-                
+
                 ?>
                 
             <?php } //While ?>
+
+            <?php
+                //Imprime todos los eventos 
+                foreach($calendario as $dia => $lista_eventos){ ?>
+                <h3>
+                    <i class="fa fa-calendar"></i>
+                    <?php    
+                        echo date ("F j, Y", strtotime($dia) ); 
+                    ?>
+                </h3>
+                <?php foreach($lista_eventos as $evento) { ?>
+                    <div class="dia">
+                        <p class="titulo">
+                            <pre>
+                             <?php var_dump($evento); ?>
+                            </pre>
+                        </p>                    
+                    </div>
+
+                <?php } //foreach - lista_eventos ?>
+            <?php } ?>
 
             <pre>
                 <?php var_dump($calendario); ?>
