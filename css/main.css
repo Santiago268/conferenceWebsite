@@ -1154,6 +1154,17 @@ div.resumen select{
   color: #fe4919;
 }
 
+/** Calendario **/
+.dia {
+  width: 50%;
+  float: left;
+  border: 2px;
+}
+
+div.dia:hover{
+  background-color: #e1e1e1;
+}
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */

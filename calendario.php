@@ -68,10 +68,7 @@
                     </div>
 
                 <?php } //foreach - lista_eventos ?>
-            <?php } ?>
-        ?>
-
-        
+            <?php } ?>      
     </div>
     
     <?php
