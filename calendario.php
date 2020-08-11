@@ -5,7 +5,7 @@
     <?php
         try{
             require_once('includes/funciones/bd_connection.php');
-            $sql = " SELECT evento_id, nombre_evento, fecha_evento, hora_evento, cat_evento, nombre_invitado, apellido_invitado ";
+            $sql = " SELECT evento_id, nombre_evento, fecha_evento, hora_evento, cat_evento, icono, nombre_invitado, apellido_invitado ";
             $sql.= " FROM eventos ";
             $sql.= " INNER JOIN categoria_evento ";
             $sql.= " ON eventos.id_cat_evento = categoria_evento.id_categoria ";
@@ -32,6 +32,7 @@
                     'fecha' => $eventos['fecha_evento'],
                     'hora' => $eventos['hora_evento'], 
                     'categoria' => $eventos['cat_evento'],
+                    'icono' => $eventos['icono'],
                     'invitado' => $eventos['nombre_invitado'] . " " .$eventos['apellido_invitado']
                 );
     
@@ -52,19 +53,22 @@
                 </h3>
                 <?php foreach($lista_eventos as $evento) { ?>
                     <div class="dia">
-                        <p class="titulo">
-                            <pre>
-                             <?php var_dump($evento); ?>
-                            </pre>
-                        </p>                    
+                        <p class="titulo"> <?php echo $evento['titulo']; ?></p>  
+                        <p class="hora"><i class="far fa-clock" aria-hidden="true"></i>
+                            <?php echo $evento['fecha']." ".$evento['hora']; ?>
+                        </p>
+                        <p>
+                            <i class="<?php echo "fa"." ".$evento['icono']; ?>" aria-hidden="true"></i>
+                            <?php echo $evento['categoria'] ?>
+                        </p>
+                        <p>
+                            <i class="fa fa-user" aria-hidden="true"></i>
+                            <?php echo $evento['invitado']; ?>
+                        </p>               
                     </div>
 
                 <?php } //foreach - lista_eventos ?>
             <?php } ?>
-
-            <pre>
-                <?php var_dump($calendario); ?>
-            </pre>
         ?>
 
         
