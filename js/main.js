@@ -192,4 +192,9 @@ $(function(){
     $('#minutos').html(event.strftime('%M'));
     $('#segundos').html(event.strftime('%S'));
   });
+
+  // Colorbox
+
+  $('.invitado_info').colorbox({inline:true, width: "50%"});
+
 });

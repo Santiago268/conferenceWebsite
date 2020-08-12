@@ -11,12 +11,24 @@
   <link rel="apple-touch-icon" href="icon.png">
   <!-- Place favicon.ico in the root directory -->
 
+  <?php
+    $archivo= basename($_SERVER['PHP_SELF']);
+    $pagina = str_replace(".php", "", $archivo);
+
+    if($pagina == 'invitados'){
+      echo '<link rel="stylesheet" href="css/colorbox.css">';
+    }else if ($pagina == 'conferencia'){
+      echo '<link rel="stylesheet" href="css/lightbox.css">';
+    }
+  ?>
+
+
+
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/all.css">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&family=Oswald:wght@400;700&family=PT+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" />
   <link rel="stylesheet" href="css/main.css">
-
   <meta name="theme-color" content="#fafafa">
 </head>
 
@@ -65,7 +77,7 @@
         <nav class="menu-navegacion">
               <a href="conferencia.php">Conference</a>
               <a href="calendario.php">Schedule</a>
-              <a href="#">Guests</a>
+              <a href="invitados.php">Guests</a>
               <a href="registro.php">Booking</a>
         </nav>
       </div>
