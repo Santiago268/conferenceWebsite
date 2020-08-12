@@ -43,7 +43,7 @@
                 <p><i class="fas fa-calendar"></i> 25th August</p>
                 <p><i class="fas fa-user"></i> Stuart Smith</p>
               </div>
-              <a href="#" class="boton derecha">See all</a>
+              <a href="calendario.php" class="boton derecha">See all</a>
             </div><!--talleres-->
 
             <div id="conferencias" class="info-curso ocultar clearfix">
@@ -60,7 +60,7 @@
                 <p><i class="fas fa-calendar"></i> 25th August</p>
                 <p><i class="fas fa-user"></i> Stuart Smith</p>
               </div>
-              <a href="#" class="boton derecha">See all</a>
+              <a href="calendario.php" class="boton derecha">See all</a>
             </div><!--conferencias-->
 
             <div id="seminarios" class="info-curso ocultar clearfix">
@@ -77,7 +77,7 @@
                 <p><i class="fas fa-calendar"></i> 25th August</p>
                 <p><i class="fas fa-user"></i> Stuart Smith</p>
               </div>
-              <a href="#" class="boton derecha">See all</a>
+              <a href="calendario.php" class="boton derecha">See all</a>
             </div><!--seminarios-->
 
         </div><!--programa-evento-->
@@ -151,7 +151,7 @@
                 <li><i class="fas fa-check"></i> All conferences</li>
                 <li><i class="fas fa-check"></i> All the workshops</li>
               </ul>
-              <a href="#" class="boton hollow">Buy It</a>
+              <a href="registro.php" class="boton hollow">Buy It</a>
             </div>  
         </li>
         <li>
@@ -163,7 +163,7 @@
               <li><i class="fas fa-check"></i> All conferences</li>
               <li><i class="fas fa-check"></i> All the workshops</li>
             </ul>
-            <a href="#" class="boton">Buy It</a>
+            <a href="registro.php" class="boton">Buy It</a>
           </div>  
         </li>
         <li>
@@ -175,7 +175,7 @@
               <li><i class="fas fa-check"></i> All conferences</li>
               <li><i class="fas fa-check"></i> All the workshops</li>
             </ul>
-            <a href="#" class="boton hollow">Buy It</a>
+            <a href="registro.php" class="boton hollow">Buy It</a>
           </div>  
         </li>
       </ul>

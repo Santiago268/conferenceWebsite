@@ -41,9 +41,9 @@
                 ?>
                 
             <?php } //While ?>
-
             <?php
                 //Imprime todos los eventos 
+                
                 foreach($calendario as $dia => $lista_eventos){ ?>
                 <h3>
                     <i class="fa fa-calendar"></i>
@@ -51,11 +51,14 @@
                         echo date ("F j, Y", strtotime($dia) ); 
                     ?>
                 </h3>
+                <div class="conjunto-dia">
                 <?php foreach($lista_eventos as $evento) { ?>
                     <div class="dia">
                         <p class="titulo"> <?php echo $evento['titulo']; ?></p>  
                         <p class="hora"><i class="far fa-clock" aria-hidden="true"></i>
-                            <?php echo $evento['fecha']." ".$evento['hora']; ?>
+                            <?php 
+                            $fecha = date ('l \t\h\e jS', strtotime($evento['fecha']) );
+                            echo $fecha." ".$evento['hora']; ?>
                         </p>
                         <p>
                             <i class="<?php echo "fa"." ".$evento['icono']; ?>" aria-hidden="true"></i>
@@ -68,7 +71,8 @@
                     </div>
 
                 <?php } //foreach - lista_eventos ?>
-            <?php } ?>      
+                </div>
+            <?php } ?>
     </div>
     
     <?php
