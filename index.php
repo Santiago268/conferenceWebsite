@@ -85,47 +85,7 @@
     </div><!--contenido-programa-->
   </section><!--programa-->
   
-  <section class="invitados contenedor">
-    <h2>Our Guests</h2>
-    <ul class="lista-invitados">
-      <li>
-        <div class="invitado">
-          <img src="img/invitado1.jpg" alt="Invitado">
-          <p>Mark LaVine</p>
-        </div>
-      </li>
-      <li>
-        <div class="invitado">
-          <img src="img/invitado2.jpg" alt="Invitado">
-          <p>Charlie Miller</p>
-        </div>
-      </li>
-      <li>
-        <div class="invitado">
-          <img src="img/invitado3.jpg" alt="Invitado">
-          <p>Stuart Smith</p>
-        </div>
-      </li>
-      <li>
-        <div class="invitado">
-          <img src="img/invitado4.jpg" alt="Invitado">
-          <p>Nicole Jones</p>
-        </div>
-      </li>
-      <li>
-        <div class="invitado">
-          <img src="img/invitado5.jpg" alt="Invitado">
-          <p>Spencer James</p>
-        </div>
-      </li>
-      <li>
-        <div class="invitado">
-          <img src="img/invitado6.jpg" alt="Invitado">
-          <p>Olivia Williams</p>
-        </div>
-      </li>
-    </ul>
-  </section>
+  <?php include_once 'includes/templates/invitados.php'; ?>
 
   <div class="contador parallax">
     <div class="contenedor">
