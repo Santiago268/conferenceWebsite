@@ -1,77 +1,5 @@
-<!doctype html>
-<html class="no-js" lang="">
+<?php include_once 'includes/templates/header.php'; ?>
 
-<head>
-  <meta charset="utf-8">
-  <title></title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <link rel="manifest" href="site.webmanifest">
-  <link rel="apple-touch-icon" href="icon.png">
-  <!-- Place favicon.ico in the root directory -->
-
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/all.css">
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&family=Oswald:wght@400;700&family=PT+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" />
-  <link rel="stylesheet" href="css/main.css">
-
-  <meta name="theme-color" content="#fafafa">
-</head>
-
-<body>
-  <!--[if IE]>
-    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-  <![endif]-->
-
-  <!-- Add your site or application content here -->
-  <header class="site-header">
-    <div class="hero">
-      <div class="contenido-header">
-        <nav class="redes-sociales">
-          <a href="#"><i class="fab fa-facebook-square"></i></a>
-          <a href="#"><i class="fab fa-twitter"></i></a>
-          <a href="#"><i class="fab fa-pinterest"></i></a>
-          <a href="#"><i class="fab fa-youtube"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-        </nav>
-        <div class="informacion-evento">
-          <div class="informacion-evento-contenido">
-            <p class="fecha"><i class="fas fa-calendar-alt"></i> 25-26 August</p>
-            <p class="ciudad"><i class="fas fa-map-marker-alt"></i> Malaga, Spain</p>
-          </div>
-          <h1 class="nombre-sitio">Malaga Software Conference</h1>
-          <p class="slogan">The best conference in <span>software development</span></p>
-        </div>
-      </div>
-    </div><!--.hero-->
-  </header>
-  <div class="barra">
-    <div class="contenedor">
-      <div class="navegacion">
-        <div class="logotipo">
-          <a href="index.html">
-            <p><i class="fas fa-angle-right"></i>Malaga Soft. Conf.</p>
-          </a>
-        </div>
-        
-        
-        <div class="menu-mobile">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-
-        <nav class="menu-navegacion">
-              <a href="conferencia.html">Conference</a>
-              <a href="#">Schedule</a>
-              <a href="#">Guests</a>
-              <a href="registro.html">Booking</a>
-        </nav>
-      </div>
-    </div><!--.contenedor-->
-  </div><!--barra-->
   <section class="seccion contenedor">
     <h2>The best conference in Software Development</h2>
     <p>Malaga Software Conference is an international software development conference that helps software teams adopt new trends and technologies. 
@@ -115,7 +43,7 @@
                 <p><i class="fas fa-calendar"></i> 25th August</p>
                 <p><i class="fas fa-user"></i> Stuart Smith</p>
               </div>
-              <a href="#" class="boton derecha">See all</a>
+              <a href="calendario.php" class="boton derecha">See all</a>
             </div><!--talleres-->
 
             <div id="conferencias" class="info-curso ocultar clearfix">
@@ -132,7 +60,7 @@
                 <p><i class="fas fa-calendar"></i> 25th August</p>
                 <p><i class="fas fa-user"></i> Stuart Smith</p>
               </div>
-              <a href="#" class="boton derecha">See all</a>
+              <a href="calendario.php" class="boton derecha">See all</a>
             </div><!--conferencias-->
 
             <div id="seminarios" class="info-curso ocultar clearfix">
@@ -149,7 +77,7 @@
                 <p><i class="fas fa-calendar"></i> 25th August</p>
                 <p><i class="fas fa-user"></i> Stuart Smith</p>
               </div>
-              <a href="#" class="boton derecha">See all</a>
+              <a href="calendario.php" class="boton derecha">See all</a>
             </div><!--seminarios-->
 
         </div><!--programa-evento-->
@@ -157,47 +85,7 @@
     </div><!--contenido-programa-->
   </section><!--programa-->
   
-  <section class="invitados contenedor">
-    <h2>Our Guests</h2>
-    <ul class="lista-invitados">
-      <li>
-        <div class="invitado">
-          <img src="img/invitado1.jpg" alt="Invitado">
-          <p>Mark LaVine</p>
-        </div>
-      </li>
-      <li>
-        <div class="invitado">
-          <img src="img/invitado2.jpg" alt="Invitado">
-          <p>Charlie Miller</p>
-        </div>
-      </li>
-      <li>
-        <div class="invitado">
-          <img src="img/invitado3.jpg" alt="Invitado">
-          <p>Stuart Smith</p>
-        </div>
-      </li>
-      <li>
-        <div class="invitado">
-          <img src="img/invitado4.jpg" alt="Invitado">
-          <p>Nicole Jones</p>
-        </div>
-      </li>
-      <li>
-        <div class="invitado">
-          <img src="img/invitado5.jpg" alt="Invitado">
-          <p>Spencer James</p>
-        </div>
-      </li>
-      <li>
-        <div class="invitado">
-          <img src="img/invitado6.jpg" alt="Invitado">
-          <p>Olivia Williams</p>
-        </div>
-      </li>
-    </ul>
-  </section>
+  <?php include_once 'includes/templates/invitados.php'; ?>
 
   <div class="contador parallax">
     <div class="contenedor">
@@ -223,7 +111,7 @@
                 <li><i class="fas fa-check"></i> All conferences</li>
                 <li><i class="fas fa-check"></i> All the workshops</li>
               </ul>
-              <a href="#" class="boton hollow">Buy It</a>
+              <a href="registro.php" class="boton hollow">Buy It</a>
             </div>  
         </li>
         <li>
@@ -235,7 +123,7 @@
               <li><i class="fas fa-check"></i> All conferences</li>
               <li><i class="fas fa-check"></i> All the workshops</li>
             </ul>
-            <a href="#" class="boton">Buy It</a>
+            <a href="registro.php" class="boton">Buy It</a>
           </div>  
         </li>
         <li>
@@ -247,7 +135,7 @@
               <li><i class="fas fa-check"></i> All conferences</li>
               <li><i class="fas fa-check"></i> All the workshops</li>
             </ul>
-            <a href="#" class="boton hollow">Buy It</a>
+            <a href="registro.php" class="boton hollow">Buy It</a>
           </div>  
         </li>
       </ul>
@@ -318,53 +206,4 @@
     </ul>
   </section>
 
-  <footer class="site-footer">
-    <div class="pie-pagina contenedor">
-      <div class="footer-informacion">
-        <h3>About <span>Malaga Software Conference</span></h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-           Sed eu eros ut ligula ornare lacinia sed vel enim.
-           Sed in suscipit ipsum, sed porttitor tortor. Vivamus vel scelerisque justo.
-        </p>
-      </div>
-      <div class="ultimos-tweets">
-        <h3>Last <span>Tweets</span></h3>
-        <ul>
-          <li>Nunc sit amet dolor vel turpis laoreet interdum. Ut sodales ornare dolor sed dapibus.</li>
-          <li>Nunc sit amet dolor vel turpis laoreet interdum. Ut sodales ornare dolor sed dapibus.</li>
-          <li>Nunc sit amet dolor vel turpis laoreet interdum. Ut sodales ornare dolor sed dapibus.</li>
-        </ul>
-      </div>
-      <div class="menu">
-        <h3>Social <span>Networks</span></h3>
-        <nav class="redes-sociales">
-          <a href="#"><i class="fab fa-facebook-square"></i></a>
-          <a href="#"><i class="fab fa-twitter"></i></a>
-          <a href="#"><i class="fab fa-pinterest"></i></a>
-          <a href="#"><i class="fab fa-youtube"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-        </nav>
-      </div>
-    </div>
-    <p class="copyright">All the Rights Reserved MALAGA SOFTWARE CONFERENCE 2020 &copy;</p>
-  </footer>
-
-  <script src="js/vendor/modernizr-3.8.0.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-  <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.4.1.min.js"><\/script>')</script>
-  <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
-  <script src="js/plugins.js"></script>
-  <script src="js/jquery.animateNumber.js"></script>
-  <script src="js/jquery.countdown.js"></script>
-  <script src="js/jquery.lettering.js"></script>
-  <script src="js/main.js"></script>
-
-  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
-  <script>
-    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
-    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set','transport','beacon'); ga('send', 'pageview')
-  </script>
-  <script src="https://www.google-analytics.com/analytics.js" async></script>
-</body>
-
-</html>
+<?php include_once 'includes/templates/footer.php'; ?>

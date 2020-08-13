@@ -3,16 +3,18 @@
 
   var regalo= document.getElementById('regalo');
   document.addEventListener('DOMContentLoaded', function(){
-    var map = L.map('mapa').setView([36.705173, -4.459848], 13);
+    if(document.getElementById('mapa')){
 
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-    }).addTo(map);
+      var map = L.map('mapa').setView([36.705173, -4.459848], 13);
 
-    L.marker([36.705173, -4.459848]).addTo(map)
-    .bindPopup('Malaga Software Conference 2020.<br> Palacio de Ferias y Congresos de Málaga.')
-    .openPopup();
-33
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+      }).addTo(map);
+
+      L.marker([36.705173, -4.459848]).addTo(map)
+      .bindPopup('Malaga Software Conference 2020.<br> Palacio de Ferias y Congresos de Málaga.')
+      .openPopup();
+    }
 
     // Campos datos de usuario
     var nombre = document.getElementById('nombre');
@@ -36,102 +38,104 @@
     var etiquetas = document.getElementById('etiquetas');
 
     //Eventos
-    calcular.addEventListener('click', calcularTotal);
-    pase_dia.addEventListener('blur', mostrarDias);
-    pase_dosdias.addEventListener('blur', mostrarDias);
-    pase_completo.addEventListener('blur', mostrarDias);
+    if(document.getElementById('calcular')){
 
-    nombre.addEventListener('blur', validarCampos);
-    apellido. addEventListener('blur', validarCampos);
-    email.addEventListener('blur', validarCampos);
+      calcular.addEventListener('click', calcularTotal);
+      pase_dia.addEventListener('blur', mostrarDias);
+      pase_dosdias.addEventListener('blur', mostrarDias);
+      pase_completo.addEventListener('blur', mostrarDias);
 
-    email.addEventListener('blur', validarEmail);
+      nombre.addEventListener('blur', validarCampos);
+      apellido. addEventListener('blur', validarCampos);
+      email.addEventListener('blur', validarCampos);
 
-    // Funciones
-    function calcularTotal(event){
-      event.preventDefault();
-      if(regalo.value == ''){
-        alert("You must choose a Gift!!");
-        regalo.focus();
-      }else{
+      email.addEventListener('blur', validarEmail);
+
+      // Funciones
+      function calcularTotal(event){
+        event.preventDefault();
+        if(regalo.value == ''){
+          alert("You must choose a Gift!!");
+          regalo.focus();
+        }else{
+          var ticketDia= parseInt(pase_dia.value, 10) || 0,
+              ticket2Dias= parseInt(pase_dosdias.value, 10) || 0,
+              ticketCompleto = parseInt(pase_completo.value, 10) || 0,
+              totalCamisas = parseInt(camisas.value, 10) || 0,
+              totalEtiquetas = parseInt(etiquetas.value, 10) || 0;
+
+          var costeTickets = (ticketDia * 30) + (ticket2Dias * 45) + (ticketCompleto * 50);
+          var total = costeTickets + ((totalCamisas * 10)*0.93) + (totalEtiquetas * 2);
+          var listadoProductos = [];
+
+          if(ticketDia >= 1)
+            listadoProductos.push(ticketDia + ' - One Day pass');
+          
+          if(ticket2Dias >= 1)
+            listadoProductos.push(ticket2Dias + ' - Two Day pass');
+
+          if(ticketCompleto >= 1)
+            listadoProductos.push(ticketCompleto + ' - Full pass');
+          
+          if(totalCamisas >= 1)
+            listadoProductos.push(totalCamisas + ' - Number of T-shirts');
+          
+          if(totalEtiquetas >= 1)
+            listadoProductos.push(totalEtiquetas + ' - Number of Sticker Packs');
+
+          lista_productos.style.display= "block"; 
+          lista_productos.innerHTML = '';
+          for(var i= 0; i < listadoProductos.length; i++){
+            lista_productos.innerHTML += listadoProductos[i] + '</br>';
+          }
+
+          suma_total.innerHTML = total.toFixed(2) + ' €';
+        }
+      }
+
+      function mostrarDias(){
         var ticketDia= parseInt(pase_dia.value, 10) || 0,
             ticket2Dias= parseInt(pase_dosdias.value, 10) || 0,
-            ticketCompleto = parseInt(pase_completo.value, 10) || 0,
-            totalCamisas = parseInt(camisas.value, 10) || 0,
-            totalEtiquetas = parseInt(etiquetas.value, 10) || 0;
+            ticketCompleto = parseInt(pase_completo.value, 10) || 0.
 
-        var costeTickets = (ticketDia * 30) + (ticket2Dias * 45) + (ticketCompleto * 50);
-        var total = costeTickets + ((totalCamisas * 10)*0.93) + (totalEtiquetas * 2);
-        var listadoProductos = [];
+        var dias_elegidos = [];
 
-        if(ticketDia >= 1)
-          listadoProductos.push(ticketDia + ' - One Day pass');
-        
-        if(ticket2Dias >= 1)
-          listadoProductos.push(ticket2Dias + ' - Two Day pass');
-
-        if(ticketCompleto >= 1)
-          listadoProductos.push(ticketCompleto + ' - Full pass');
-        
-        if(totalCamisas >= 1)
-          listadoProductos.push(totalCamisas + ' - Number of T-shirts');
-        
-        if(totalEtiquetas >= 1)
-          listadoProductos.push(totalEtiquetas + ' - Number of Sticker Packs');
-
-        lista_productos.style.display= "block"; 
-        lista_productos.innerHTML = '';
-        for(var i= 0; i < listadoProductos.length; i++){
-          lista_productos.innerHTML += listadoProductos[i] + '</br>';
+        if (ticketDia > 0){
+          dias_elegidos.push('viernes');
+        }
+        if (ticket2Dias > 0){
+          dias_elegidos.push('viernes', 'sabado');
+        }
+        if (ticketCompleto > 0){
+          dias_elegidos.push('viernes', 'sabado', 'domingo');
         }
 
-        suma_total.innerHTML = total.toFixed(2) + ' €';
+        for(var i= 0; i < dias_elegidos.length; i++){
+          document.getElementById(dias_elegidos[i]).style.display= 'block';
+        }
+      }
+
+      function validarCampos(){
+        if(this.value == ''){
+          errorDiv.style.display='block';
+          errorDiv.innerHTML = 'This field is needed';
+          this.style.border = '1px solid red';
+        } else {
+          errorDiv.style.display = 'none';
+          this.style.border = '1px solid #cccccc';
+        }
+      }
+
+      function validarEmail(){
+        if(this.value.indexOf("@") > -1){
+          this.style.border = '1px solid #cccccc';
+        }else{
+          errorDiv.style.display='block';
+          errorDiv.innerHTML = 'The Email introduced is not valid (@)';
+          this.style.border = '1px solid red';
+        }
       }
     }
-
-    function mostrarDias(){
-      var ticketDia= parseInt(pase_dia.value, 10) || 0,
-          ticket2Dias= parseInt(pase_dosdias.value, 10) || 0,
-          ticketCompleto = parseInt(pase_completo.value, 10) || 0.
-
-      var dias_elegidos = [];
-
-      if (ticketDia > 0){
-        dias_elegidos.push('viernes');
-      }
-      if (ticket2Dias > 0){
-        dias_elegidos.push('viernes', 'sabado');
-      }
-      if (ticketCompleto > 0){
-        dias_elegidos.push('viernes', 'sabado', 'domingo');
-      }
-
-      for(var i= 0; i < dias_elegidos.length; i++){
-        document.getElementById(dias_elegidos[i]).style.display= 'block';
-      }
-    }
-
-    function validarCampos(){
-      if(this.value == ''){
-        errorDiv.style.display='block';
-        errorDiv.innerHTML = 'This field is needed';
-        this.style.border = '1px solid red';
-      } else {
-        errorDiv.style.display = 'none';
-        this.style.border = '1px solid #cccccc';
-      }
-    }
-
-    function validarEmail(){
-      if(this.value.indexOf("@") > -1){
-        this.style.border = '1px solid #cccccc';
-      }else{
-        errorDiv.style.display='block';
-        errorDiv.innerHTML = 'The Email introduced is not valid (@)';
-        this.style.border = '1px solid red';
-      }
-    }
-
   }); //DOM CONTENT LOADED
 
 })();
@@ -188,4 +192,9 @@ $(function(){
     $('#minutos').html(event.strftime('%M'));
     $('#segundos').html(event.strftime('%S'));
   });
+
+  // Colorbox
+
+  $('.invitado_info').colorbox({inline:true, width: "50%"});
+
 });
